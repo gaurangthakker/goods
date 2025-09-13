@@ -1,1 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jamnagar Sections Goods Department - Western Railway</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background-color: #f9f9f9;
+    }
+    header {
+      background-color: #003366;
+      color: white;
+      padding: 15px;
+      text-align: center;
+    }
+    nav {
+      display: flex;
+      justify-content: center;
+      background-color: #0055a5;
+    }
+    nav button {
+      background: none;
+      border: none;
+      color: white;
+      padding: 14px 20px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+    nav button:hover {
+      background-color: #003f7f;
+    }
+    iframe {
+      display: block;
+      width: 100%;
+      height: 85vh;
+      border: none;
+    }
+  </style>
+  <script>
+    function openPage(option) {
+      if (option === "goodsTotal") {
+        document.getElementById("contentFrame").src =
+          "https://docs.google.com/spreadsheets/d/e/2PACX-1vQqrTCxSqPyguB34ABW-9Mljfdi1xK1uUuW3mOGXEucBP2cWPYPzVtaN7FN5nq-vL1DlJscjICiXwtb/pubhtml";
+      } else {
+        alert("Page is Under Construction");
+      }
+    }
+  </script>
+</head>
+<body>
+  <header>
+    <h1>Jamnagar Sections Goods Department - Western Railway</h1>
+  </header>
 
+  <nav>
+    <button onclick="openPage('goodsTotal')">Goods Earnings (Total)</button>
+    <button onclick="openPage('commodityWise')">Goods Earnings (Commodity Wise)</button>
+    <button onclick="openPage('apReturn')">A.P. Return</button>
+    <button onclick="openPage('weighbridge')">Weighbridge Position</button>
+    <button onclick="openPage('outstanding')">Outstanding Summary</button>
+    <button onclick="openPage('fluctuation')">Fluctuation Register</button>
+  </nav>
+
+  <iframe id="contentFrame"></iframe>
+</body>
+</html>
